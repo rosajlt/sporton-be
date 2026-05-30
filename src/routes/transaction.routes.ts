@@ -8,6 +8,6 @@ const router = Router();
 router.post("/checkout", upload.single("image"), createTransaction);
 router.get("/", authenticate, getTransactions);
 router.get("/:id", getTransactionById);
-router.patch("/:id/status", authenticate, updateTransactionStatus);
+router.put("/:id/status", authenticate, upload.none(), updateTransactionStatus);
 
 export default router;

@@ -19,7 +19,7 @@ export const createTransaction = async (req: Request, res: Response): Promise<vo
             try {
                 transactionData.purchasedItems = JSON.parse(transactionData.purchasedItems);
             } catch (error) {
-                res.status(400).json({ message: "Invalid format for purchased items" });
+                res.status(400).json({ message: "Invalid format for purchasedItems" });
                 return;
             }
         }
